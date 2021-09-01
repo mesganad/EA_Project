@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: airlines-reservation-system
+  datasource:
+    url: jdbc:mysql://localhost/airlinereservation
+    username: maya
+    password: maya
+    driverClassName: com.mysql.cj.jdbc.Driver
+    hikari:
+      maximumPoolSize: 10
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: springeas@gmail.com
+    password: spring45ea!
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+server:
+  port: 8090
